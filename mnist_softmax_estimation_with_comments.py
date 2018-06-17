@@ -18,7 +18,6 @@ mnist = input_data.read_data_sets("/tmp/data/", one_hot=True)
 #    tf.placeholderクラスのインスタンスとして定義
 #
 # 第1引数(=tf.float32)は行列の各要素の数値の型
-#   ピクセル値は整数だが後に浮動小数点演算を行うためtf.float32を指定
 # 第2引数(=[None, 784])は行列のサイズを指定している
 #   None: Noneを指定することで任意の数のデータを入力可能となる
 #   784: 画像1枚のピクセル数
