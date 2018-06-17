@@ -66,8 +66,9 @@ correct_prediction = tf.equal(tf.argmax(p, 1), tf.argmax(t, 1))
 # tf.reduce_meanは全体の平均値(=正解率)を返す
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
-
+# セッションを1つ用意して変数sessに格納
 sess = tf.InteractiveSession()
+# パラメータの初期化を行う
 sess.run(tf.initialize_all_variables())
 
 ### 機械学習ステップ3(最適化) ###
