@@ -131,6 +131,7 @@ for _ in range(20000):
     # 500回更新する毎に
     if i % 500 == 0:
         loss_vals, acc_vals = [], []
+        # メモリの使用量を減らすためにテストデータを分割して4回に分けて評価
         for c in range(4):
             start = len(mnist.test.labels) / 4 * c
             end = len(mnist.test.labels) / 4 * (c+1)
